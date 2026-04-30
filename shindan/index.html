@@ -46,9 +46,9 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
 /* ===== Section: 悩み ===== */
 .bg-cream { background: #F5EEDC; }
 .worries { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
-.worry { background: white; padding: 30px 28px; border-radius: 4px; border-left: 3px solid #BE9115; box-shadow: 0 1px 3px rgba(20,20,19,0.04); position: relative; }
-.worry-icon { font-size: 28px; margin-bottom: 14px; color: #BE9115; font-weight: 700; }
-.worry-text { font-size: 16px; font-weight: 700; line-height: 1.65; color: #141413; }
+.worry { background: white; padding: 20px 24px; border-radius: 4px; border-left: 3px solid #BE9115; box-shadow: 0 1px 3px rgba(20,20,19,0.04); position: relative; display: flex; align-items: center; gap: 14px; }
+.worry-icon { display: flex; align-items: center; gap: 6px; font-size: 26px; color: #BE9115; font-weight: 700; flex-shrink: 0; }
+.worry-text { font-size: 15px; font-weight: 700; line-height: 1.5; color: #141413; }
 .worry-text .quote { color: #BE9115; }
  
 /* ===== Section: 情報非対称 ===== */
@@ -147,8 +147,12 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
 @media (max-width: 768px) {
   .hero h1 { font-size: 32px; }
   .section-title { font-size: 26px; }
-  .asymmetry { grid-template-columns: 1fr; gap: 18px; }
-  .gap-arrow { transform: rotate(90deg); margin: 0 auto; }
+  .asymmetry { grid-template-columns: 1fr auto 1fr; gap: 10px; }
+  .side { padding: 16px 12px; }
+  .side h3 { font-size: 15px; margin-bottom: 12px; }
+  .side li { font-size: 11.5px; padding: 6px 0 6px 14px; }
+  .side li::before { font-size: 11.5px; top: 6px; }
+  .gap-arrow { transform: none; font-size: 32px; margin: 0; }
   .flow { grid-template-columns: 1fr 1fr; }
   .flow-step::after { display: none; }
   .advisor, .lab { grid-template-columns: 1fr; gap: 30px; }
@@ -184,8 +188,8 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
 <!-- ===== Hero ===== -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-tag">▼ 群馬県内限定 / 一級建築士があなたの家選びを診断</div>
-    <h1>その家、<br><span class="highlight">本当に大丈夫</span>ですか?</h1>
+    <div class="hero-tag">その家、その土地、買って後悔しませんか？</div>
+    <h1>▼ 群馬県内限定 /<br><span class="highlight">一級建築士があなたの家選びを診断</span></h1>
     <p class="hero-sub">
       建売も注文住宅も、買う側と売る側で<strong>情報の差がありすぎる。</strong><br>
       契約する前に、第三者の目で見てみませんか。
@@ -195,7 +199,7 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
     <div class="hero-badges">
       <div class="badge">創業30年・一級建築士が直接診断</div>
       <div class="badge">完全無料</div>
-      <div class="badge">営業マンがいません</div>
+      <div class="badge">一切営業をしません</div>
       <div class="badge">群馬地域密着</div>
     </div>
     <a href="#cta" class="cta-primary">無料で診断を申し込む</a>
@@ -211,28 +215,28 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
     <p class="section-sub">家は人生最大の買い物。でも、ほとんどの人が初めての経験です。</p>
     <div class="worries">
       <div class="worry">
-        <div class="worry-icon">?</div>
-        <p class="worry-text"><span class="quote">「営業マンの言うこと、</span><br>そのまま信じていいのかな…」</p>
+        <div class="worry-icon">?<svg width="24" height="24" viewBox="0 0 24 24" fill="#BE9115"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+        <p class="worry-text"><span class="quote">「営業マンの言うこと、</span>そのまま信じていいのかな…」</p>
       </div>
       <div class="worry">
-        <div class="worry-icon">?</div>
-        <p class="worry-text"><span class="quote">「この見積金額、</span><br>本当に妥当な値段なの?」</p>
+        <div class="worry-icon">?<svg width="24" height="24" viewBox="0 0 24 24" fill="#BE9115"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+        <p class="worry-text"><span class="quote">「この見積金額、</span>本当に妥当な値段なの?」</p>
       </div>
       <div class="worry">
-        <div class="worry-icon">?</div>
-        <p class="worry-text"><span class="quote">「この性能、</span><br>住んでから後悔しないかな…」</p>
+        <div class="worry-icon">?<svg width="24" height="24" viewBox="0 0 24 24" fill="#BE9115"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+        <p class="worry-text"><span class="quote">「この性能、</span>住んでから後悔しないかな…」</p>
       </div>
       <div class="worry">
-        <div class="worry-icon">?</div>
-        <p class="worry-text"><span class="quote">「この間取り、</span><br>うちの家族に合っている?」</p>
+        <div class="worry-icon">?<svg width="24" height="24" viewBox="0 0 24 24" fill="#BE9115"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+        <p class="worry-text"><span class="quote">「この間取り、</span>うちの家族に合っている?」</p>
       </div>
       <div class="worry">
-        <div class="worry-icon">?</div>
-        <p class="worry-text"><span class="quote">「光熱費、月いくら</span><br>かかるか想像できない…」</p>
+        <div class="worry-icon">?<svg width="24" height="24" viewBox="0 0 24 24" fill="#BE9115"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+        <p class="worry-text"><span class="quote">「光熱費、月いくら</span>かかるか想像できない…」</p>
       </div>
       <div class="worry">
-        <div class="worry-icon">?</div>
-        <p class="worry-text"><span class="quote">「相談したいけど、</span><br>営業されそうで怖い…」</p>
+        <div class="worry-icon">?<svg width="24" height="24" viewBox="0 0 24 24" fill="#BE9115"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+        <p class="worry-text"><span class="quote">「相談したいけど、</span>営業されそうで怖い…」</p>
       </div>
     </div>
   </div>
@@ -252,7 +256,7 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
           <li>住宅のスペック・性能を熟知</li>
           <li>カタログ・データを毎日扱う</li>
           <li>過去数百〜数千件の販売経験</li>
-          <li>不利な情報の伝え方を知っている</li>
+          <li>デメリットをうまく伝える方法を知っている</li>
           <li>クロージングの心理技術を持つ</li>
         </ul>
       </div>
@@ -269,9 +273,13 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
       </div>
     </div>
  
-    <p class="gap-caption">
-      この「圧倒的な情報の差」が、住んでから後悔する人を量産しています。
-    </p>
+    <div class="gap-caption" style="line-height:1.9;">
+      この「圧倒的な情報の差」が、<br>
+      <span style="color:#2D6A88;">「おしゃれだけど冬はとても寒い」</span><br>
+      <span style="color:#2D6A88;">「思ったより日当たりが悪い」</span><br>
+      <span style="color:#2D6A88;">「いろいろ壊れて結局費用がかかった」</span><br>
+      など住んでから後悔する人を量産しています。
+    </div>
   </div>
 </section>
  
@@ -289,7 +297,7 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
           <div class="diag-num" style="margin-bottom: 0;">1</div>
           <h3 class="diag-title" style="margin-bottom: 0;">性能診断</h3>
         </div>
-        <p class="diag-desc">断熱等級・耐震等級・気密性能を読み解き、夏涼しく冬暖かいか、各室の温度差はないか、実際の暮らしでどんな違いが出るかを解説します。</p>
+        <p class="diag-desc">断熱等級・気密性能を読み解き、夏涼しく冬暖かいか、各室の温度差はないか、実際の暮らしでどんな違いが出るかを解説します。</p>
       </div>
       <div class="diag-card">
         <img src="https://www.okaken-home.co.jp/wp/wp-content/uploads/2025/10/20250725_018.jpg" alt="ライフタイムコスト" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 20px;">
@@ -357,23 +365,23 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
   <div class="section-inner">
     <div class="section-label">OUR PROMISE</div>
     <h2 class="section-title">私たちの3つの約束</h2>
-    <p class="section-sub">「展示場も無く、営業マンもいない」――それがオカケンホームのスタンスです。</p>
+    <p class="section-sub">「お客様第一」――それがオカケンホームのスタンスです。</p>
  
     <div class="promises">
       <div class="promise">
         <div class="promise-num">PROMISE 01</div>
         <h3 class="promise-title">営業しません</h3>
-        <p class="promise-desc">そもそも当社には営業マンがおりません。診断後の電話・DM・訪問営業は一切いたしません。お客様からのご連絡があるまで、こちらから営業活動をすることはありません。</p>
+        <p class="promise-desc">診断でお越しのお客様には自社商品の売り込みやセールスはしません。また診断後の電話・DM・訪問営業は一切いたしません。お客様からのご連絡があるまで、こちらから営業活動をすることはありません。</p>
       </div>
       <div class="promise">
         <div class="promise-num">PROMISE 02</div>
-        <h3 class="promise-title">中立に見ます</h3>
-        <p class="promise-desc">弊社で建てていただく必要はありません。価格・価値観で他社が良い場合は「他社が良い」と申し上げます。お客様が後悔のない選択をできるよう、専門家としての本音で診断します。</p>
+        <h3 class="promise-title">中立を守ります</h3>
+        <p class="promise-desc">他社のお客様をとることはしません。価格・価値観で他社が良い場合は「他社が良い」と申し上げます。第三者目でお客様が後悔のない選択をできるよう、専門家としての本音で診断します。</p>
       </div>
       <div class="promise">
         <div class="promise-num">PROMISE 03</div>
         <h3 class="promise-title">プロが診ます</h3>
-        <p class="promise-desc">一級建築士・代表取締役会長兼社長の岡田が直接診断します。必要に応じて二級建築士・ファイナンシャルプランナーも同席し、複数の専門家の目で見ます。</p>
+        <p class="promise-desc">創業30年、累計棟数400棟の弊社建築士が直接診断します。必要に応じて大工やファイナンシャルプランナーも同席し、複数の専門家の目で見ます。</p>
       </div>
     </div>
   </div>
@@ -417,7 +425,7 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
       <img src="https://www.okaken-home.co.jp/wp/wp-content/uploads/2025/10/012.jpg" alt="実験棟" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; box-shadow: 0 12px 32px rgba(20,20,19,0.1);">
       <div>
         <h3>性能の話を、実物で。</h3>
-        <p>「断熱等級5」「気密C値」と言われても、ピンときませんよね。当社の実験棟では、断熱材の中身、床下の構造、温度の動き方が、すべて目で見て、手で触れて、体感できます。</p>
+        <p>「断熱等級」「C値」「UA値」と言われても、ピンときませんよね。当社の実験棟では、断熱材の中身、床下の構造、温度の動き方が、すべて目で見て、手で触れて、体感できます。</p>
         <p>カタログでは伝わらない「家の本当の性能」を、診断と合わせて体感していただけます。</p>
         <ul class="lab-features">
           <li>断熱材が一部ガラス張りで見える構造</li>
