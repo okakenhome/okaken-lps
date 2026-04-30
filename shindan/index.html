@@ -64,7 +64,8 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
 .side li { padding: 9px 0 9px 22px; font-size: 14px; position: relative; color: #333333; }
 .side li::before { content: "▪"; position: absolute; left: 0; color: #BE9115; font-size: 14px; top: 9px; }
 .gap-arrow { font-size: 56px; color: #BE9115; font-weight: 700; align-self: center; }
-.gap-caption { text-align: center; font-size: 17px; font-weight: 700; color: #141413; margin-top: 30px; padding: 22px 28px; background: white; border: 1px solid #BE9115; border-radius: 4px; letter-spacing: 0.03em; }
+.gap-caption { text-align: center; font-size: 17px; font-weight: 700; color: #141413; margin-top: 30px; padding: 22px 28px; background: white; border: 1px solid #BE9115; border-radius: 4px; letter-spacing: 0.03em; line-height: 1.9; }
+.gap-quote { color: #2D6A88; font-size: 1.15em; display: block; font-weight: 900; margin: 4px 0; }
  
 /* ===== Section: 解決 ===== */
 .bg-light { background: #F5EEDC; }
@@ -155,6 +156,8 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
   .side li { font-size: 11.5px; padding: 6px 0 6px 14px; }
   .side li::before { font-size: 11.5px; top: 6px; }
   .gap-arrow { transform: none; font-size: 32px; margin: 0; }
+  .gap-caption { padding: 18px 12px; font-size: 14.5px; }
+  .gap-quote { font-size: 1.05em; letter-spacing: -0.06em; margin: 2px 0; }
   .flow { grid-template-columns: 1fr 1fr; }
   .flow-step::after { display: none; }
   .advisor, .lab { grid-template-columns: 1fr; gap: 30px; }
@@ -279,11 +282,11 @@ body { font-family: '游ゴシック Medium', YuGothic, YuGothicM, 'Hiragino Kak
       </div>
     </div>
  
-    <div class="gap-caption" style="line-height:2.0;">
-      この「圧倒的な情報の差」が、<br>
-      <span style="color:#2D6A88; font-size: 1.15em; display: inline-block; margin-top: 6px;">「おしゃれだけど冬はとても寒い」</span><br>
-      <span style="color:#2D6A88; font-size: 1.15em;">「思ったより日当たりが悪い」</span><br>
-      <span style="color:#2D6A88; font-size: 1.15em; display: inline-block; margin-bottom: 6px;">「不具合が多く結局費用がかさんだ」</span><br>
+    <div class="gap-caption">
+      この「圧倒的な情報の差」が、
+      <span class="gap-quote" style="margin-top: 8px;">「おしゃれだけど冬はとても寒い」</span>
+      <span class="gap-quote">「思ったより日当たりが悪い」</span>
+      <span class="gap-quote" style="margin-bottom: 8px;">「不具合が多く結局費用がかさんだ」</span>
       など住んでから後悔する人を量産しています。
     </div>
   </div>
